@@ -56,7 +56,7 @@ theorem limit_unique
 
 section additional_note_on_special_cases
 /-!
-The main purpose was to slightly explore how Lean proofs look like and how to interact
+The main purpose was to explore a bit how Lean proofs look like and how to interact
 with them. The following is just an extra remark on generality that I think is worth making.
 
 The theorem `limit_unique` was proven assuming `X` is a metric space. It now works out of the
