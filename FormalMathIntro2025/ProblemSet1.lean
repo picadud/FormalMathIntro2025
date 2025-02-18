@@ -33,6 +33,7 @@ theorem isCauchy_def {a : ℕ → ℝ} :
     IsCauchy a ↔ ∀ ε > 0, ∃ B : ℕ, ∀ n m, B ≤ n → B ≤ m → |a n - a m| < ε := by
   rfl -- true by definition
 
+-- EXERCISE 1
 /-- Any convergent real-number sequence is necessarily a Cauchy sequence. -/
 theorem isCauchy_of_tendsTo {a : ℕ → ℝ} {t : ℝ} (a_lim : TendsTo a t) :
     IsCauchy a := by
@@ -51,6 +52,7 @@ theorem isCauchy_of_tendsTo {a : ℕ → ℝ} {t : ℝ} (a_lim : TendsTo a t) :
 def IsBounded (a : ℕ → ℝ) :=
   ∃ M, ∀ n, |a n| ≤ M
 
+-- EXERCISE 2
 -- Before we can prove that all Cauchy-sequences are bounded, we need an auxiliary result.
 lemma exists_forall_abs_initial_le (a : ℕ → ℝ) (m : ℕ) :
     ∃ M, ∀ n < m, |a n| ≤ M := by
@@ -65,6 +67,7 @@ lemma exists_forall_abs_initial_le (a : ℕ → ℝ) (m : ℕ) :
     -- and `Nat.succ_ne_succ` useful here.
     sorry
 
+-- EXERCISE 3
 /-- Any Cauchy sequence is bounded. -/
 theorem isBounded_of_isCauchy {a : ℕ → ℝ} (a_cauchy : IsCauchy a) :
     IsBounded a := by
@@ -72,6 +75,7 @@ theorem isBounded_of_isCauchy {a : ℕ → ℝ} (a_cauchy : IsCauchy a) :
   -- You may take some inspiration from the uniqueness of limits proof.
   sorry
 
+-- EXERCISE 4
 -- Now we easily get that:
 /-- Any convergent real-number sequence is bounded. -/
 theorem isBounded_of_tendsTo {a : ℕ → ℝ} {t : ℝ} (a_lim : TendsTo a t) :
