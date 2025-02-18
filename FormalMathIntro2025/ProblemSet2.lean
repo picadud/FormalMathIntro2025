@@ -1,5 +1,7 @@
 import Mathlib.Tactic -- imports all the Lean tactics
 
+set_option linter.unusedTactic false
+
 namespace AaltoFormalMath2025
 
 section

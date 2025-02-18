@@ -1,5 +1,7 @@
 import Mathlib.Tactic -- imports all the Lean tactics
 
+set_option linter.unusedTactic false
+
 namespace AaltoFormalMath2025
 
 section
@@ -50,7 +52,7 @@ def IsBounded (a : ℕ → ℝ) :=
   ∃ M, ∀ n, |a n| ≤ M
 
 -- Before we can prove that all Cauchy-sequences are bounded, we need an auxiliary result.
-lemma exists_forall_initial_le (a : ℕ → ℝ) (m : ℕ) :
+lemma exists_forall_abs_initial_le (a : ℕ → ℝ) (m : ℕ) :
     ∃ M, ∀ n < m, |a n| ≤ M := by
   -- Let us prove this by induction on `m`.
   -- (This is our first induction proof.
