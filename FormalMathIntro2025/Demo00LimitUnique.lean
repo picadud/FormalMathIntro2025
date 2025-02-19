@@ -1,4 +1,6 @@
-import Mathlib
+import Mathlib.Analysis.RCLike.Basic
+import Mathlib.Data.Real.StarOrdered
+import Mathlib.Tactic
 
 namespace AaltoFormalMath2025
 
@@ -31,8 +33,8 @@ def HasLimit (x : ℕ → X) (a : X) :=
 theorem limit_unique
     (lim_is_a : HasLimit x a) (lim_is_b : HasLimit x b) :
     a = b := by
-  suffices dist_le_any_pos : ∀ ε > 0, dist a b ≤ ε
-  · apply dist_eq_zero.mp
+  suffices dist_le_any_pos : ∀ ε > 0, dist a b ≤ ε by
+    apply dist_eq_zero.mp
     apply le_antisymm ?_ dist_nonneg
     apply le_of_forall_pos_le_add
     simpa only [zero_add] using dist_le_any_pos

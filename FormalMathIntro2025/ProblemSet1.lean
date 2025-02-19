@@ -72,7 +72,6 @@ lemma exists_forall_abs_initial_le (a : ℕ → ℝ) (m : ℕ) :
 theorem isBounded_of_isCauchy {a : ℕ → ℝ} (a_cauchy : IsCauchy a) :
     IsBounded a := by
   -- This is some work --- make sure you know the math proof first!
-  -- You may take some inspiration from the uniqueness of limits proof.
   sorry
 
 -- EXERCISE 4
