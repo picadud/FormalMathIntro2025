@@ -172,13 +172,17 @@ and two sets `s₁, s₂ ⊆ X` such that `f '' (s₁ ∩ s₂) ≠ f '' s₁ �
 -/
 
 -- EXERCISE 4 (preliminary part where almost all the work is):
--- **Define two types `Z` and `W`, a function `f : Z → W`, and two sets `s₁, s₂ ⊆ Z`**
+-- **Define two types `Z` and `W`, a function `g : Z → W`, and two sets `s₁, s₂ ⊆ Z`**
 -- **which you will use as the counterexample.**
+-- (The names `Z`, `W`, `g` instead of `X`, `Y`, `g` are suggested here just to avoid
+-- collision with earlier variable names in this section.)
 -- As usual, make sure that you have the right math idea first!
+
 -- **Hint!** Take inspiration from Buzzard's `Section03functions/Sheet03.lean`.
 -- By constructing two inductive types with just a few elements each, and by defining
 -- a suitable function between them, it is not difficult to construct sets which
 -- provide a counterexample to images of intersections being intersections of images.
+
 -- **Hint'** The notation for singleton sets in Lean is basically like in ordinary math:
 -- If you want to for example take `s₁ : Set Z` to be the singleton set consisting of
 -- just `z₁ : Z`, then you can `def s₁ := {z₁}` (provided you have constructed a
