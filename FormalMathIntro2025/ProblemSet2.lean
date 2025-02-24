@@ -172,9 +172,9 @@ and two sets `s₁, s₂ ⊆ X` such that `f '' (s₁ ∩ s₂) ≠ f '' s₁ �
 -/
 
 -- EXERCISE 4 (preliminary part where almost all the work is):
--- **Define two types `Z` and `W`, a function `g : Z → W`, and two sets `s₁, s₂ ⊆ Z`**
+-- **Define two types `Z` and `W`, a function `h : Z → W`, and two sets `s₁, s₂ ⊆ Z`**
 -- **which you will use as the counterexample.**
--- (The names `Z`, `W`, `g` instead of `X`, `Y`, `g` are suggested here just to avoid
+-- (The names `Z`, `W`, `h` instead of `X`, `Y`, `f` are suggested here just to avoid
 -- collision with earlier variable names in this section.)
 -- As usual, make sure that you have the right math idea first!
 
