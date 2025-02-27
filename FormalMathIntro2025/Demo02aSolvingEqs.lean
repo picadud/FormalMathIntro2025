@@ -15,7 +15,6 @@ Remember tactics `use` (handling ∃ by providing a witness) and `intro` (handli
 as well as `norm_num` and `ring`.
 -/
 
--- EXERCISE: Complete the proof below.
 /-- This is *"Cardano's cubic"*.
 
 There are of course soft existence arguments for roots of cubics, but here
