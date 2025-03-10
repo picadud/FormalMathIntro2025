@@ -37,6 +37,23 @@ theorem isCauchy_def {a : ℕ → ℝ} :
 /-- Any convergent real-number sequence is necessarily a Cauchy sequence. -/
 theorem isCauchy_of_tendsTo {a : ℕ → ℝ} {t : ℝ} (a_lim : TendsTo a t) :
     IsCauchy a := by
+    rw[isCauchy_def]
+    rw[tendsTo_def] at a_lim
+    intro ε εP
+    have e:= ε /2
+    have ep: e > 0
+
+    specialize a_lim e εP
+    cases' a_lim with B h1
+    use B
+    intro n m
+    have h2 := h1
+    intro Bn Bm
+    specialize h2 n Bn
+    have h3 := h1
+    specialize h3 m Bm
+
+
   -- This is some work --- make sure you know the math proof first!
   -- You may take some inspiration from the uniqueness of limits proof.
   sorry
